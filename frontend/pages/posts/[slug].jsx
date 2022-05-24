@@ -7,14 +7,12 @@ import Head from "next/head";
 import Image from "next/image";
 
 const Wrapper = styled.div`
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 `;
 
 const ContentWrapper = styled.div`
-  display: flex;
   flex-direction: column;
   width: 40%;
   height: 100%;
@@ -32,7 +30,6 @@ const ContentWrapper = styled.div`
 `;
 
 const PostHeaderWrapper = styled.div`
-  display: flex;
   flex-direction: row;
   width: 100%;
   margin-bottom: 30px;
@@ -42,7 +39,6 @@ const PostHeaderWrapper = styled.div`
 `;
 
 const TitleWrapper = styled.div`
-  display: flex;
   flex-direction: column;
   position: relative;
   width: 100%;
@@ -69,7 +65,6 @@ const TitleWrapper = styled.div`
 `;
 
 const AdditionalWrapper = styled.div`
-  display: flex;
   flex-direction: column;
   position: relative;
   width: 100%;
@@ -79,16 +74,14 @@ const AdditionalWrapper = styled.div`
 `;
 
 const DetailWrapper = styled.div`
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
   margin-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 `;
 
 const SelfTextWrapper = styled.div`
-  display: flex;
   flex-direction: column;
   align-items: center;
   color: ${({ theme }) => theme.primaryColor} !important;
@@ -119,7 +112,8 @@ const SelfTextWrapper = styled.div`
     color: ${({ theme }) => theme.primaryColor} !important;
   }
 
-  a {
+  h4 {
+    padding-top: 100px;
   }
 
   @media only screen and (max-width: ${screenWidths.phone}) {
@@ -134,7 +128,6 @@ const SelfTextWrapper = styled.div`
 `;
 
 const ContentFooter = styled.div`
-  display: flex;
   width: 100%;
   min-height: 200px;
   max-height: 200px;
@@ -190,16 +183,13 @@ const TagSpan = styled.span`
 `;
 
 const BottomInfo = styled.div`
-  display: flex;
   align-items: flex-end;
   height: 35%;
   margin-bottom: 10px;
   color: ${({ theme }) => theme.primaryColor};
 `;
 
-const BottomDate = styled.div`
-  display: flex;
-`;
+const BottomDate = styled.div``;
 
 const BottomDateText = styled.p`
   font-size: 12pt;
@@ -209,7 +199,6 @@ const BottomDateText = styled.p`
 `;
 
 const BottomTime = styled.div`
-  display: flex;
   margin-left: 50px;
   @media only screen and (max-width: 500px) {
     margin-left: 50px;

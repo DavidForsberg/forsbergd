@@ -189,8 +189,6 @@ const BottomInfo = styled.div`
   color: ${({ theme }) => theme.primaryColor};
 `;
 
-const BottomDate = styled.div``;
-
 const BottomDateText = styled.p`
   font-size: 12pt;
   font-weight: 400;
@@ -281,7 +279,7 @@ const Post = ({ postData }) => {
           </TitleWrapper>
         </PostHeaderWrapper>
         <BottomInfo>
-          <BottomDate>
+          <div>
             <Image
               src={`/icons/calendar_${iconColor}.svg`}
               width="20"
@@ -290,7 +288,7 @@ const Post = ({ postData }) => {
               priority
             />
             <BottomDateText>{dateStr}</BottomDateText>
-          </BottomDate>
+          </div>
           <BottomTime>
             <Image
               src={`/icons/time_${iconColor}.svg`}
@@ -302,13 +300,13 @@ const Post = ({ postData }) => {
             <BottomTimeText>{postData.post.read_time}</BottomTimeText>
           </BottomTime>
         </BottomInfo>
-        {postData.post.thumbnail && postData.post.thumbnail.length > 0 && (
+        {/* {postData.post.thumbnail && postData.post.thumbnail.length > 0 && (
           <img
             src={`${baseUrl}/${postData.post.server_filepath}/${postData.post.thumbnail}`}
             style={{ marginBottom: 50 }}
             alt="Post thumbnail"
           />
-        )}
+        )} */}
 
         <SelfTextWrapper
           dangerouslySetInnerHTML={{
@@ -317,7 +315,7 @@ const Post = ({ postData }) => {
           style={{ width: "100%" }}
         ></SelfTextWrapper>
         <AdditionalWrapper>
-          {postData.post.filename && postData.post.filename.length > 0 && (
+          {/* {postData.post.filename && postData.post.filename.length > 0 && (
             <FileDownloadButton onClick={() => getZipFile()}>
               <label>{`${postData.post.filename}`}</label>
               <img
@@ -326,7 +324,7 @@ const Post = ({ postData }) => {
                 alt="download file icon"
               />
             </FileDownloadButton>
-          )}
+          )} */}
         </AdditionalWrapper>
         <ContentFooter></ContentFooter>
       </ContentWrapper>

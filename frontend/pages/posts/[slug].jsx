@@ -305,7 +305,7 @@ const Post = ({ postData }) => {
         {postData.post.thumbnail && postData.post.thumbnail.length > 0 && (
           <img
             src={`${baseUrl}/${postData.post.server_filepath}/${postData.post.thumbnail}`}
-            style={{ marginBottom: 150 }}
+            style={{ marginBottom: 50 }}
             alt="Post thumbnail"
           />
         )}

@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Disallow: /admin
+
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://forsbergd.com
+
+# Sitemaps
+Sitemap: https://forsbergd.com/sitemap.xml

@@ -18,7 +18,6 @@ const Wrapper = styled.div`
     position: fixed;
     background-color: ${({ theme }) => theme.primaryBackground};
   }
-  /* transition: all 0.5s linear;  */
 `;
 
 const InnerWrapper = styled.div`

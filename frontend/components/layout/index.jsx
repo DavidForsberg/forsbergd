@@ -24,11 +24,11 @@ const MainPage = styled.div`
   overflow-x: hidden;
   @media only screen and (max-width: 1100px) {
     flex-direction: column;
+    height: auto;
   }
 `;
 
 const LeftView = styled(motion.div)`
-  // variant = normal | portfolio | post
   width: ${({ $animWidth }) => $animWidth};
   height: 100%;
   @media only screen and (max-width: 1100px) {

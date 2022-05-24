@@ -27,7 +27,7 @@ const Title = styled.h3`
 const Desc = styled.div`
   height: 45%;
   width: 80%;
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 1100px) {
     width: 100%;
   }
 `;

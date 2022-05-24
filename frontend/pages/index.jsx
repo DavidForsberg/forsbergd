@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fontsizes, screenWidths } from "../utils/globalStyles";
+import { screenWidths } from "../utils/globalStyles";
 import React from "react";
 import { NormalText, Title } from "../components/pageui";
 import Icon from "../components/pageui/icon";
@@ -46,6 +46,8 @@ const PageSection = styled.section`
   @media only screen and (max-width: 1100px) {
     padding-top: 0;
     padding-bottom: 0;
+    min-height: fit-content;
+    max-height: fit-content;
   }
 `;
 

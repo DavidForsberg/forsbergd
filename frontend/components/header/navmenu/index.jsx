@@ -33,6 +33,7 @@ const NavText = styled.a`
   border-right: ${({ theme, hasBorder }) =>
     hasBorder && `1px ${theme.primaryColor} solid`};
   padding-right: 30px;
+  user-select: none;
 `;
 
 const MenuIconWrapper = styled.div`

@@ -23,7 +23,4 @@ export const NormalText = styled.p`
   font-size: ${fontsizes.regular};
   margin-top: 20px;
   line-height: 160%;
-  @media only screen and (max-width: ${screenWidths.laptop}) {
-    font-size: ${fontsizes.tiny};
-  }
 `;

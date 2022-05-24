@@ -126,6 +126,7 @@ const Portfolio = () => {
             width="1000"
             height="2000"
             objectFit="contain"
+            priority
           />
         </ParallaxLayer>
         <ParallaxLayer
@@ -142,6 +143,7 @@ const Portfolio = () => {
               width={300}
               height={600}
               objectFit="contain"
+              priority
             />
           </ProjectImageWrapper>
         </ParallaxLayer>
@@ -156,6 +158,7 @@ const Portfolio = () => {
               width={300}
               height={800}
               objectFit="contain"
+              priority
             />
           </ProjectImageWrapper>
         </ParallaxLayer>
@@ -170,6 +173,7 @@ const Portfolio = () => {
               width={300}
               height={600}
               objectFit="contain"
+              priority
             />
           </ProjectImageWrapper>
         </ParallaxLayer>
@@ -184,6 +188,7 @@ const Portfolio = () => {
               width={300}
               height={600}
               objectFit="contain"
+              priority
             />
           </ProjectImageWrapper>
         </ParallaxLayer>

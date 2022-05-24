@@ -2,7 +2,7 @@ var express = require("express");
 var router = express.Router();
 const pool = require("../db");
 import { Request, Response } from "express";
-import { initFilesystem } from "../middleware/uploadFiles";
+import { initFilesystem } from "../middleware/uploadfiles";
 import { authenticateToken } from "../middleware/auth";
 import path from "path";
 const fs = require("fs");

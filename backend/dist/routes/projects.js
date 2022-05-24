@@ -15,11 +15,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
 var router = express.Router();
 const pool = require("../db");
-const uploadFiles_1 = require("../middleware/uploadFiles");
+const uploadfiles_1 = require("../middleware/uploadfiles");
 const auth_1 = require("../middleware/auth");
 const path_1 = __importDefault(require("path"));
 const fs = require("fs");
-const upload = (0, uploadFiles_1.initFilesystem)();
+const upload = (0, uploadfiles_1.initFilesystem)();
 router.post("/projects", auth_1.authenticateToken, upload.any(), (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const projectDataJson = JSON.parse(req.body.projectData);

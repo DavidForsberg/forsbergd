@@ -15,12 +15,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
 var router = express.Router();
 const pool = require("../db");
-const uploadFiles_1 = require("../middleware/uploadFiles");
+const uploadfiles_1 = require("../middleware/uploadfiles");
 const auth_1 = require("../middleware/auth");
 const path_1 = __importDefault(require("path"));
 const fs = require("fs");
 const format = require("pg-format");
-const upload = (0, uploadFiles_1.initFilesystem)();
+const upload = (0, uploadfiles_1.initFilesystem)();
 router.post("/posts", auth_1.authenticateToken, upload.any(), (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const postDataJson = JSON.parse(req.body.postData);
@@ -107,7 +107,8 @@ router.get("/posts/:slug", (req, res) => __awaiter(void 0, void 0, void 0, funct
         const post = posts[0];
         const { rows: tags } = yield pool.query(`SELECT "Tag".title FROM "PostTag" JOIN "Tag" ON "PostTag".tag_id = "Tag".id WHERE "PostTag".post_id = $1`, [post["id"]]);
         res.send({
-            post,
+            message: "Fetched post",
+            post: post,
             tags: tags.map((tag) => Object.values(tag)).flat(),
         });
     }

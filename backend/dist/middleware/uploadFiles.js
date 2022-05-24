@@ -18,4 +18,4 @@ const fileStorageEngine = multer_1.default.diskStorage({
 });
 const initFilesystem = () => (0, multer_1.default)({ storage: fileStorageEngine });
 exports.initFilesystem = initFilesystem;
-//# sourceMappingURL=uploadFiles.js.map
+//# sourceMappingURL=uploadfiles.js.map

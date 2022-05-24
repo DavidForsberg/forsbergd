@@ -17,7 +17,6 @@ export const screenWidths = {
 export const GlobalStyles = createGlobalStyle`
     body {
         background: ${({ theme }) => theme.body};
-        /* transition: all 0.5s linear;  */
         margin: 0;
         padding: 0;
         box-sizing: border-box;

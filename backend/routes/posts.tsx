@@ -13,6 +13,7 @@ type PostResponse = {
   message: string;
   post?: any;
   posts?: Array<any>;
+  tags?: Array<any>;
 };
 
 type PostCreate = {
@@ -190,13 +191,14 @@ router.get(
 
       const post = posts[0];
 
-      const { rows: tags } = await pool.query(
+      const { rows: tags }: { rows: Array<any> } = await pool.query(
         `SELECT "Tag".title FROM "PostTag" JOIN "Tag" ON "PostTag".tag_id = "Tag".id WHERE "PostTag".post_id = $1`,
         [post["id"]]
       );
 
       res.send({
-        post,
+        message: "Fetched post",
+        post: post,
         tags: tags.map((tag: any) => Object.values(tag)).flat(),
       });
     } catch (err) {

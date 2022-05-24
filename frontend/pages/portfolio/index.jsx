@@ -4,6 +4,7 @@ import Icon from "../../components/pageui/icon";
 import { NormalText, Title, TitleLine } from "../../components/pageui";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Image from "next/image";
+import Link from "next/link";
 
 const Wrapper = styled.div`
   flex-direction: column;
@@ -106,7 +107,12 @@ const Portfolio = () => {
               A website for a construction company located in Stockholm City.
               Developed with vanilla HTML, JavaScipt and CSS.
             </p>
-            <ProjectType>Website</ProjectType>
+            <ProjectType>
+              Website,{" "}
+              <Link href="https://gamlaenskedeplatt.se">
+                <a>https://gamlaenskedeplatt.se</a>
+              </Link>
+            </ProjectType>
           </ProjectStickyInfo>
         </ParallaxLayer>
 

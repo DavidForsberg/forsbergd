@@ -58,13 +58,25 @@ const ProjectNumber = styled.p`
 const ProjectType = styled.p`
   padding-bottom: 50px;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 400;
   margin-top: auto;
+
+  a {
+    color: ${({ theme }) => theme.primaryColor};
+    margin-left: 10px;
+  }
 `;
 
 const ProjectImageWrapper = styled.div`
-  padding-right: 200px;
-  margin-right: ${({ marginRight }) => marginRight && marginRight}px;
+  margin-left: auto;
+  padding-right: calc(
+    ${({ marginRight }) => (marginRight ? marginRight : 100)}px
+  );
+  @media only screen and (max-width: 1500px) {
+    padding-right: calc(
+      ${({ marginRight }) => (marginRight ? marginRight / 1.3 : 25)}px
+    );
+  }
 `;
 
 const Portfolio = () => {
@@ -99,7 +111,7 @@ const Portfolio = () => {
             <p
               style={{
                 fontWeight: 400,
-                fontSize: "1.5rem",
+                fontSize: "1.3rem",
                 opacity: 0.7,
                 marginTop: 15,
               }}
@@ -108,7 +120,7 @@ const Portfolio = () => {
               Developed with vanilla HTML, JavaScipt and CSS.
             </p>
             <ProjectType>
-              Website,{" "}
+              Website |
               <Link href="https://gamlaenskedeplatt.se">
                 <a>https://gamlaenskedeplatt.se</a>
               </Link>
@@ -119,7 +131,11 @@ const Portfolio = () => {
         <ParallaxLayer
           offset={1}
           speed={1}
-          style={{ justifyContent: "flex-end" }}
+          style={{
+            justifyContent: "flex-end",
+            width: "60%",
+            marginLeft: "auto",
+          }}
         >
           <Image
             src="/images/laptop_proj_1.png"
@@ -141,7 +157,7 @@ const Portfolio = () => {
             <Image
               src="/images/iphone_proj_1_1.png"
               width={300}
-              height={600}
+              height={400}
               objectFit="contain"
               priority
             />
@@ -156,7 +172,7 @@ const Portfolio = () => {
             <Image
               src="/images/iphone_proj_1_2.png"
               width={300}
-              height={800}
+              height={500}
               objectFit="contain"
               priority
             />
@@ -171,7 +187,7 @@ const Portfolio = () => {
             <Image
               src="/images/iphone_proj_1_3.png"
               width={300}
-              height={600}
+              height={400}
               objectFit="contain"
               priority
             />
@@ -186,11 +202,22 @@ const Portfolio = () => {
             <Image
               src="/images/iphone_proj_1_4.png"
               width={300}
-              height={600}
+              height={400}
               objectFit="contain"
               priority
             />
           </ProjectImageWrapper>
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={3.9}
+          speed={0}
+          style={{ justifyContent: "center", marginTop: 100 }}
+        >
+          <img
+            style={{ position: "absolute", bottom: 0, width: "50%" }}
+            src="/images/rocket.svg"
+            alt="rocket"
+          />
         </ParallaxLayer>
       </Parallax>
     </Wrapper>
